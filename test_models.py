@@ -31,7 +31,9 @@ queries = {
 
 #Nombre del archivo de salida
 MODEL = "openai/gpt-oss-20b"
+EMBED = "littlejohn-ai/bge-m3-spa-law-qa HYDE Subqueries"
 MODEL = MODEL.replace("/", "_")
+EMBED = EMBED.replace("/", "_")
 
 # Carpeta de salida
 output_dir = "./test_results"
@@ -44,6 +46,7 @@ OUTPUT_FILE = f"{output_dir}/test_results_{MODEL}_{datetime.now().strftime('%Y%m
 contenido_md = "# 📄 Resultados de Consultas a la API\n\n"
 contenido_md += f"**Fecha de generación:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
 contenido_md += f"## Modelo: {MODEL}\n\n"
+contenido_md += f"## Embeding: Embed-service {EMBED}\n\n"
 
 # Procesar cada consulta
 for nombre, payload in queries.items():
@@ -84,4 +87,4 @@ for nombre, payload in queries.items():
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
     f.write(contenido_md)
 
-print(f"✅ Resultados guardados en {OUTPUT_FILE}")
+print(f"=====Resultados guardados en {OUTPUT_FILE}======")

@@ -148,8 +148,8 @@ def process_resolution(pdf_path,filename):
     return resolution_data
 
 # ----- Procesar PDF y guardar JSON
-input_path = os.path.expanduser("~/Desktop/Proyecto Resoluciones/Resoluciones/2025")
-output_path = os.path.expanduser("~/Desktop/Proyecto Resoluciones/Resoluciones_JSON/2025")
+input_path = os.path.expanduser("~/Desktop/Proyecto Resoluciones/Resoluciones/2024")
+output_path = os.path.expanduser("~/Desktop/Proyecto Resoluciones/Resoluciones_JSON/2024")
 
 os.makedirs(output_path, exist_ok=True) #Crear carpetas si no existen
 

@@ -127,11 +127,10 @@ def process_resolution(pdf_path,filename):
     
     # ----- Capturar quien firma
     # Buscar todas las líneas que podrían ser firmantes
-    signature_matches = re.findall(r"([A-ZÁÉÍÓÚÑ][^\n]+,\s*[A-ZÁÉÍÓÚÑ ]+)", text)
+    #signature_matches = re.findall(r"([A-ZÁÉÍÓÚÑ][^\n]+,\s*[A-ZÁÉÍÓÚÑ ]+)", text)
 
     # Tomar la última coincidencia como firmante
-    signature = signature_matches[-1].strip() if signature_matches else None
-
+    #signature = signature_matches[-1].strip() if signature_matches else None
 
     # ------ Contruir JSON
 
@@ -143,7 +142,6 @@ def process_resolution(pdf_path,filename):
         "tipo": type_session,
         "considerando": considering,
         "resuelve": resolving,
-        "firmante": signature
     }
     return resolution_data
 

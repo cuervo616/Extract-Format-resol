@@ -2,3 +2,4 @@ test_results
 .DS_Store
 .env
 __pycache__
+.vscode
